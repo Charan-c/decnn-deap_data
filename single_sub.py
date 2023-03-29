@@ -32,7 +32,7 @@ data=np.array(data)
 
 # Data for the 1st participant and 1st trial
 
-eeg_data=data[0, :, :32, 384:8064]
+eeg_data=data[0, :5, :32, 384:8064]
 
 """
 EMD object is an instance of the EMD class that represents the EMD algorithm. 
