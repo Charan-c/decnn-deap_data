@@ -9,6 +9,9 @@ import pickle
 from pyhht import EMD
 from scipy.stats import norm
 from scipy.stats import entropy
+import tqdm
+
+print("All imports done")
 
 def read_data(filename):
     x = pickle._Unpickler(open(filename, 'rb'))
@@ -18,7 +21,7 @@ def read_data(filename):
 
 labels = []
 data = []
-for i in range(1, 33): 
+for i in tqdm(range(1, 33)): 
     fileph =  "../deap_data/s" + format(i, '02') + ".dat"
     d = read_data(fileph)
     labels.append(d['labels'])
@@ -29,7 +32,7 @@ data=np.array(data)
 
 # Data for the 1st participant and 1st trial
 
-eeg_data=data[0, 0, :32, 384:8064]
+eeg_data=data[0, :, :32, 384:8064]
 
 """
 EMD object is an instance of the EMD class that represents the EMD algorithm. 
@@ -112,5 +115,6 @@ for i in range(1,eeg_imf1.shape[0]+1):
 
 resen=entropies1+entropies2+entropies3+entropies4+entropies5
 resen=np.array(resen).reshape(1,29,160)
+np.save('entropies_1.npy', resen)
 
 print(resen.shape)
