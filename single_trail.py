@@ -9,7 +9,7 @@ import pickle
 from pyhht import EMD
 from scipy.stats import norm
 from scipy.stats import entropy
-import tqdm
+from tqdm import tqdm
 
 print("All imports done")
 
