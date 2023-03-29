@@ -21,8 +21,8 @@ def read_data(filename):
 
 labels = []
 data = []
-for i in tqdm(range(1, 33)): 
-    fileph =  "../deap_data/s" + format(i, '02') + ".dat"
+for i in tqdm(range(32)): 
+    fileph =  "../deap_data/s" + format(i+1, '02') + ".dat"
     d = read_data(fileph)
     labels.append(d['labels'])
     data.append(d['data'])  #32,40,40,8064
