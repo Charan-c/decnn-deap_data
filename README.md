@@ -22,5 +22,6 @@ The project is based on the following research paper:
 
 
 ## Block Diagram
-[Block Diagram.pdf](https://github.com/Charan-c/decnn-deap_data/files/12288035/Block.Diagram.pdf)
+![Screenshot (145)](https://github.com/Charan-c/decnn-deap_data/assets/69704956/70008ca4-e915-4247-810b-1e52b8f44fb7)
+
 
